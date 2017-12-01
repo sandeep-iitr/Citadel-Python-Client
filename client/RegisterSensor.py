@@ -12,7 +12,7 @@ import requests
 # defining the api-endpoint 
 API_ENDPOINT = "https://localhost:8080/api/point"
 
-sensor = "{\"query\":{\"userToken\":\"e1e7013a-fb31-4087-8019-8d210396867a\",\"pointType\":\"temp\",\"unit\":\"F\"}}"
+sensor = "{\"query\":{\"userToken\":\"6a1ae2f7-495f-4d7d-8a55-255fd1fad755\",\"pointType\":\"temp\",\"unit\":\"F\"}}"
 
 # Sending Data
 #r = requests.post(url = API_ENDPOINT, data = sensor,verify=False)
@@ -28,7 +28,8 @@ sensor = "{\"query\":{\"userToken\":\"e1e7013a-fb31-4087-8019-8d210396867a\",\"p
 
 API_ENDPOINT_QUERY = "https://localhost:8080/api/query"
 
-query = "{\"query\":{\"uuid\":\"a318e0a7-4c79-417c-ad8b-b1c96c55c453\"}}";
+#add usertoken here as well, remove the userID, userToken from response
+query = "{\"query\":{\"uuid\":\"c70954b3-65df-4507-9dff-3a678c052de9\"}}";
 
 # Sending query
 r = requests.post(url = API_ENDPOINT_QUERY, data = query,verify=False)
