@@ -12,7 +12,11 @@ import requests
 # defining the api-endpoint 
 API_ENDPOINT = "https://localhost:8080/api/point"
 
-sensor = "{\"query\":{\"userToken\":\"6a1ae2f7-495f-4d7d-8a55-255fd1fad755\",\"pointType\":\"temp\",\"unit\":\"F\"}}"
+#sensor = "{\"query\":{\"userToken\":\"6a1ae2f7-495f-4d7d-8a55-255fd1fad755\",\"pointType\":\"temp\",\"unit\":\"F\"}}"
+sensor = "{\"query\":{\"userToken\":\"e17e176a-8830-4075-ad0a-7e74963ac7e4\",\"pointType\":\"temp\",\"unit\":\"F\"}}"
+
+
+#37db5441-19cb-47b2-87a9-3f9b0232ca78
 
 # Sending Data
 #r = requests.post(url = API_ENDPOINT, data = sensor,verify=False)
@@ -20,16 +24,14 @@ sensor = "{\"query\":{\"userToken\":\"6a1ae2f7-495f-4d7d-8a55-255fd1fad755\",\"p
 # extracting response text 
 #pastebin_url = r.text
 #print("The pastebin URL is:%s"%pastebin_url)
-#a318e0a7-4c79-417c-ad8b-b1c96c55c453
-
-#The pastebin URL is:{"result":"SUCCESS","uuid":"0fd115a6-8228-4c35-9f4f-7144519d0a76"}
+#The pastebin URL is:{"result":"SUCCESS","uuid":"e617d1a1-6323-4d5d-b66a-a63ab70ca349"}
 
 #querying the Sensor just inserted.
 
 API_ENDPOINT_QUERY = "https://localhost:8080/api/query"
 
-#add usertoken here as well, remove the userID, userToken from response
-query = "{\"query\":{\"uuid\":\"c70954b3-65df-4507-9dff-3a678c052de9\"}}";
+
+query = "{\"query\":{\"userToken\":\"e17e176a-8830-4075-ad0a-7e74963ac7e5\",\"uuid\":\"e617d1a1-6323-4d5d-b66a-a63ab70ca349\"}}";
 
 # Sending query
 r = requests.post(url = API_ENDPOINT_QUERY, data = query,verify=False)
