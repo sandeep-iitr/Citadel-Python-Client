@@ -25,7 +25,7 @@ API_ENDPOINT_QUERY = "https://localhost:8080/api/querydata"
 #query to be send to api
 query="{\"query\":{\"lat_min\":29,\"lat_max\":31,\"lng_min\":59,\"lng_max\":61,\"timestamp_min\":1499813608623,\"timestamp_max\":1499813808623}}"
 
-#r = requests.post(url = API_ENDPOINT_QUERY, data = query, verify=False)
+r = requests.post(url = API_ENDPOINT_QUERY, data = query, verify=False)
 
-#pastebin_url = r.text
-#print("The pastebin URL is:%s"%pastebin_url)
+pastebin_url = r.text
+print("The pastebin URL is:%s"%pastebin_url)
