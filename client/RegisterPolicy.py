@@ -12,15 +12,8 @@ import requests
 # defining the api-endpoint 
 API_ENDPOINT = "https://localhost:8089/api/registerPolicy"
 
-sensor = "{\"userToken\":\"bd694827-8665-45c6-ad2e-720e15385934\",\"what\":[\"bacfa2ba-df15-4d1c-9575-d32c47ed24a1\"], \"whom\":[\"testcitadel1@gmail.com\",\"testcitadel3@gmail.com\"]}"
-
-
-#37db5441-19cb-47b2-87a9-3f9b0232ca78
+Policy = '{"userToken":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzMmNiOTljYS1lMTRkLTQ1OGMtOTAwOS00MjI4NGMwMTk4YTIifQ.DpPJ0nuh4EvAdEG28nWcwMkjMZ7KIlPLtQu1idRnyGU","policy":{"sensors":["ee548c8c-5636-452d-b0a7-57fb4b6abeef"], "users":["testcitadel1@gmail.com","testcitadel3@gmail.com"]}}'
 
 # Sending Data
-r = requests.post(url = API_ENDPOINT, data = sensor,verify=False)
-
-# extracting response text 
-pastebin_url = r.text
-print("The pastebin URL is:%s"%pastebin_url)
-#The pastebin URL is:{"result":"SUCCESS","uuid":"e617d1a1-6323-4d5d-b66a-a63ab70ca349"}
+r = requests.post(url = API_ENDPOINT, data = Policy,verify=False)
+print("Response is:%s"%r.text)
