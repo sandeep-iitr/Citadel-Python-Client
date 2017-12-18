@@ -1,0 +1,10 @@
+tyson:
+use HDFS. (Pake + structured formats)
+(Diffeent directories on HDFS for indexes.)
+Spark will go in and recognize these data organizations. (Spark will recognize directory structure is certain way and will filter them). Hdfs will definitely have access control and authentication. 
+
+indexing in hdfs through directory trick. spark hash buckets. for a given query it will do hash, and given query it will map it to the bucket.
+
+Primary indexes are supported in hdfs via spark. Secondary indexes no idea. 
+
+HDFS: access control at directory, files layer etc. Which files are supported, and which files denied. 
