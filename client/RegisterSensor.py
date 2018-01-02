@@ -5,6 +5,9 @@
 #May need to kill previous instances
 #sudo killall -15 mongod
 
+#start Virtuoso
+#/media/sandeep/2Tb/sandeep/MetroInsight/installation/virtuoso/virtuoso-installed/bin/virtuoso-t -f &
+
 
 # importing the requests library
 import requests
@@ -12,10 +15,11 @@ import requests
 # defining the api-endpoint 
 API_ENDPOINT = "https://localhost:8080/api/point"
 
-sensor = '{"name":"temp","unit":"F"}'
+#sensor = '{"name":"temp","unit":"F"}'
+Sensor = '{"userToken":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5ZjBmZGNjNC1mY2VmLTRhY2QtYjQ4ZC03MTEwYjgzMzFjZGIifQ.B83WC1EJpPmmZ9rS6S8u9vJHEOiS61wwMmTWLuidnCE","sensor":{"name":"temperature1","unit":"F"}}'
 
 # Sending Data
-r = requests.post(url = API_ENDPOINT, data = sensor,verify=False)
+r = requests.post(url = API_ENDPOINT, data = Sensor,verify=False)
 
 print("The Response is:%s"%r.text)
 
@@ -25,7 +29,7 @@ print("The Response is:%s"%r.text)
 API_ENDPOINT_QUERY = "https://localhost:8080/api/query"
 
 
-query = '{"query":{"name":"temp"}}';
+query = '{"query":{"name":"temperature1"}}';
 
 # Sending query
 r = requests.post(url = API_ENDPOINT_QUERY, data = query,verify=False)

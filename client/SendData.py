@@ -8,14 +8,12 @@ import requests
 API_ENDPOINT = "https://localhost:8080/api/data"
 
 # data to be sent to api
-data = "{\"userToken\":\"bd694827-8665-45c6-ad2e-720e15385934\",\"uuid\":\"9399222e-9fb9-40fb-bb6d-1ed0bad9a0f7\",\"data\":[{\"uuid\":\"0fd115a6-8228-4c35-9f4f-7144519d0a76\",\"timestamp\":1499813708623,\"value\":15,\"geometryType\":\"point\",\"coordinates\":[[30,60]]}]}"
+data = '{"userToken":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5ZjBmZGNjNC1mY2VmLTRhY2QtYjQ4ZC03MTEwYjgzMzFjZGIifQ.B83WC1EJpPmmZ9rS6S8u9vJHEOiS61wwMmTWLuidnCE","data":[{"uuid":"d259fe92-c3d8-4ff3-a00e-915f178aafa0","timestamp":1499813708623,"value":15,"geometryType":"point","coordinates":[[60,30]]},{"uuid":"d259fe92-c3d8-4ff3-a00e-915f178aafa0","timestamp":1499813708623,"value":15,"geometryType":"point","coordinates":[[60,30]]}]}'
 
 # Sending Data
-r = requests.post(url = API_ENDPOINT, data = data, verify=False)
+#r = requests.post(url = API_ENDPOINT, data = data, verify=False)
 
-# extracting response text 
-pastebin_url = r.text
-print("The pastebin URL is:%s"%pastebin_url)
+#print("Response is:%s"%r.text)
 
 
 #query the data from the API
@@ -25,7 +23,5 @@ API_ENDPOINT_QUERY = "https://localhost:8080/api/querydata"
 #query to be send to api
 query="{\"query\":{\"lat_min\":29,\"lat_max\":31,\"lng_min\":59,\"lng_max\":61,\"timestamp_min\":1499813608623,\"timestamp_max\":1499813808623}}"
 
-#r = requests.post(url = API_ENDPOINT_QUERY, data = query, verify=False)
-
-#pastebin_url = r.text
-#print("The pastebin URL is:%s"%pastebin_url)
+r = requests.post(url = API_ENDPOINT_QUERY, data = query, verify=False)
+print("Response is:%s"%r.text)
