@@ -12,7 +12,7 @@ import requests
 # defining the api-endpoint 
 API_ENDPOINT = "https://localhost:8080/api/point"
 
-sensor = '{"query":{"pointType":"temp","unit":"F"}}'
+sensor = '{"pointType":"temp","unit":"F"}'
 
 # Sending Data
 r = requests.post(url = API_ENDPOINT, data = sensor,verify=False)
