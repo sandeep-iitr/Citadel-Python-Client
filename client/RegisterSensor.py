@@ -25,7 +25,7 @@ print("The Response is:%s"%r.text)
 API_ENDPOINT_QUERY = "https://localhost:8080/api/query"
 
 
-query = '{"query":{"uuid":"46d5f807-bfde-48d9-af59-fa4c9ae88051"}}';
+query = '{"query":{"name":"temp"}}';
 
 # Sending query
 r = requests.post(url = API_ENDPOINT_QUERY, data = query,verify=False)
