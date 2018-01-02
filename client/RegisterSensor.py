@@ -22,14 +22,13 @@ print("The Response is:%s"%r.text)
 
 #querying the Sensor just inserted.
 
-#API_ENDPOINT_QUERY = "https://localhost:8080/api/query"
+API_ENDPOINT_QUERY = "https://localhost:8080/api/query"
 
 
-#query = "{\"query\":{\"userToken\":\"e17e176a-8830-4075-ad0a-7e74963ac7e5\",\"uuid\":\"e617d1a1-6323-4d5d-b66a-a63ab70ca349\"}}";
+query = '{"query":{"uuid":"46d5f807-bfde-48d9-af59-fa4c9ae88051"}}';
 
 # Sending query
-#r = requests.post(url = API_ENDPOINT_QUERY, data = query,verify=False)
+r = requests.post(url = API_ENDPOINT_QUERY, data = query,verify=False)
 
-#pastebin_url = r.text
-#print("The pastebin URL is:%s"%pastebin_url)
+print("The Response is:%s"%r.text)
 
