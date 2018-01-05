@@ -7,6 +7,11 @@
 
 #start Virtuoso
 #/media/sandeep/2Tb/sandeep/MetroInsight/installation/virtuoso/virtuoso-installed/bin/virtuoso-t -f &
+#virtuoso/virtuoso-installed/var/lib/virtuoso/db$ /media/sandeep/2Tb/sandeep/MetroInsight/installation/virtuoso/virtuoso-installed/bin/virtuoso-t -f &
+
+
+#start Redis
+#redis/redis-stable/src$ ./redis-server 
 
 
 # importing the requests library

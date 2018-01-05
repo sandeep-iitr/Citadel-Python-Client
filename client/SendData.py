@@ -22,7 +22,7 @@ API_ENDPOINT_QUERY = "https://localhost:8080/api/querydata"
 #"uuids":["d259fe92-c3d8-4ff3-a00e-915f178aafa0"]
 
 #query to be send to api
-query='{"userToken":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI3NTExZGFhMC1hNzdkLTQ4MTYtOGU0OC1lYjU3ODYyY2U4YTAifQ.MKrj4ZcH4iYTU8r18urJw1H67EraZY0KEvB8b0RDVSE","query":{"lat_min":29,"lat_max":31,"lng_min":59,"lng_max":61,"timestamp_min":1499813608623,"timestamp_max":1499813808623}}'
+query='{"userToken":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkMjM3ZmM5OC1iNmZjLTQzODEtODg5Zi0yODAzMjNjMzc2ZjkifQ.uezYKbz_vP2D9bTSDga1hZ5iHQLbMoeRV7asARLPySk","query":{"lat_min":29,"lat_max":31,"lng_min":59,"lng_max":61,"timestamp_min":1499813608623,"timestamp_max":1499813808623}}'
 
 r = requests.post(url = API_ENDPOINT_QUERY, data = query, verify=False)
 print("Response is:%s"%r.text)
